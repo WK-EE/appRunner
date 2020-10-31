@@ -1,6 +1,6 @@
 This python GUI application will allow you to run some apps that you use on a daily basis.
 Also, it will save your preferences, by generating a text file that contains all your settings.
-Therefore, the next time you run this GUI, and click on "Run Apps" in the GUI window, it will run all your chosen apps. 
+Therefore, the next time you run this GUI, and click on "Run Apps" in the GUI window, it will run all your chosen apps. Another cool feature is you could remove an app from the list from within the GUI. This saves you having to go to the text file that saves your preferences to remove it.
 
 Before you run this python file, please ensure the following is taken care of:
 - Give the variable textfile_path a path of your choice where the text file that holds your application preferences will be created.
