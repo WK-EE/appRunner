@@ -78,19 +78,14 @@ def runApp():
 
 # The removeApps function allows the user to remove an application that was added to the list, and will refresh the display 
 def removeApps():
-    list_length = len(apps)
-    if list_length > 1: 
+    
+    if apps: 
         del apps[-1]
         clearFrame()
         for app in apps:
             label = tk.Label(frame, text = app, bg = "gray")
             label.pack()
-    else:
-        del apps[0]
-        clearFrame()
-        for app in apps:
-            label = tk.Label(frame, text = app, bg = "gray")
-            label.pack()
+
     print(len(apps))
 ############################################################################################################################
 
