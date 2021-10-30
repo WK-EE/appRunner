@@ -2,7 +2,6 @@
 Created on Wed Jun 24 23:48:51 2020
 
 @author: Wael
-
 """
 
 # Below, we are mporting all the necessary modules for this GUI app to function properly
