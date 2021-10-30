@@ -12,19 +12,14 @@ import subprocess, sys
 import os.path
 from os import path
 
-
 # The root variable holds the app structure
 root = tk.Tk()
-
 
 # The apps variable will contain a list of the application names (and their directories)
 apps = []
 
-
 # The textfile_path variable holds the path where you want the text file to be created on your machine
 textfile_path = "/XXXX/XXXX/XXXXX/save.txt"
-
-
 
 # The section below checks if the text file exists, and if it exists,
 # then it opens to check what the previously saved preferences are 
@@ -35,8 +30,6 @@ if path.exists(textfile_path):
         apps = [x for x in tempApps if x.strip()]
         print(apps)
 ##########################################################################
-
-
 
 # The addApp function allows the user to choose the applications that will run the next time the user utilizes this GUI
 def addApp():    
@@ -52,8 +45,6 @@ def addApp():
         label.pack()
 #######################################################################################################################
 
-
-
 # The clearFrame() function will be used to refresh the new preferences on the GUI frame whenever an application is removed
 def clearFrame():
     # destroy all widgets from frame
@@ -65,16 +56,12 @@ def clearFrame():
     frame.pack_forget()
 ##########################################################################################################
 
-
-
 # The runApp function will run the applications chosen by the user
 def runApp():
     for app in apps:
         opener = "open" 
         subprocess.call([opener, app])
 ##################################################################
-
-
 
 # The removeApps function allows the user to remove an application that was added to the list, and will refresh the display 
 def removeApps():
@@ -88,8 +75,6 @@ def removeApps():
 
     print(len(apps))
 ############################################################################################################################
-
-
 
 # The section below builds the canvas of our Python GUI
 canvas = tk.Canvas(root, height = 650, width = 700, bg = "#263D42")
@@ -111,8 +96,6 @@ for app in apps:
     label = tk.Label(frame, text = app)
     label.pack()
 ########################################################    
-    
-
 
 # The line below will run the GUI application 
 root.mainloop()
